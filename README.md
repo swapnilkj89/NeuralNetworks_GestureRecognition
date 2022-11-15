@@ -5,6 +5,15 @@ Project to recognize  hand gesture using state of the art neural networks.
 - Manish Hemani
 - Swapnil Johari
 
+## Table of Contents
+* [General Info](#general-information)
+* [Understanding the Dataset](#understanding-the-dataset)
+* [Model Overview](#model-overview)
+* [Technologies Used](#technology-used)
+* [Conclusions](#conclusions)
+* [Acknowledgements](#acknowledgements)
+
+## General Information
 Imagine you are working as a data scientist at a home electronics company which manufactures state of the art smart televisions. You want to develop a cool feature in the smart-TV that can recognise five different gestures performed by the user which will help users control the TV without using a remote.
 
 The gestures are continuously monitored by the webcam mounted on the TV. Each gesture corresponds to a specific command:
@@ -19,6 +28,7 @@ Each video is a sequence of 30 frames (or images). In the next couple of lecture
 
 ## Understanding the Dataset
 The training data consists of a few hundred videos categorised into one of the five classes. Each video (typically 2-3 seconds long) is divided into a sequence of 30 frames(images). These videos have been recorded by various people performing one of the five gestures in front of a webcam - similar to what the smart TV will use. 
+
 
 ## Model Overview
 
@@ -47,9 +57,28 @@ The training data consists of a few hundred videos categorised into one of the f
 |    conv_3d16   |     Conv3D     |       20       |     30    |      230,949     |         Yes        |       2.8      |    85%   |     68%     |
 | rnn_cnn1_model |    CNN-LSTM    |       20       |     20    |     2,573,925    |         Yes        |      30.2      |    23%   |     94%     |
 
-### ### Transfer Learning Models (CNN + RNN)
+### Transfer Learning Models (CNN + RNN)
 |     **Model**     |   **Model Type**  | **Batch Size** | **Epoch** | **Total Params** | **Augmented Data** | **Model Size** | **Loss** | **Acuracy** |
 |:-----------------:|:-----------------:|:--------------:|:---------:|:----------------:|:------------------:|:--------------:|:--------:|:-----------:|
 | rnn_cnn_tl_model  | Transfer Learning | 5              | 20        | 3,840,453        | Yes                | 19.9           | 4%       | 99%         |
 | rnn_cnn_tl2_model | With GRU          | 5              | 20        | 3,693,253        | Yes                | 43.4           | 1%       | 100%        |
 
+## Technology Used
+
+- Visyal Studio
+- Numpy
+- Pandas
+- Tensorflow
+- Matplotlib
+- Glob
+- Keras
+- OpenCV
+- imageio
+
+## Conclusion
+
+Model 19 is best model wrt Accuracy
+
+## Acknowledgement
+- JarvisLabs
+- UpGrade
